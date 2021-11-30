@@ -1,0 +1,24 @@
+<button routerLink="/form" ><i class="far fa-address-card"></i>Guardar</button>
+
+<table class="table">
+  <thead>
+    <tr >
+     
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pro of filas; let i=index">
+      <td>{{pro.id}}</td>
+      <td>{{pro.nombre}}</td>
+      <td>{{pro.paterno}}</td>
+      <td>
+       <button (click)="editar(i)">Editar</button>
+       <button (click)="eliminar(i)">Eliminar</button>
+        <a hre="#" class="text-danger px-2 user-select-auto" style= "cursor: pointer;" (click)="eliminar(i)"><i class="fas fa-trash-alt"></i></a>
+    </td>
+  </tr>
+  </tbody>
+</table>
